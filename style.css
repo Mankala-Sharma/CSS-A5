@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    height: 100vh;
+    width:100%;
+    background-color: gray;
+    background-image: url(./images/sky.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    animation: bgchange 20s linear infinite;
+    /* animation-delay:8s; */
+    overflow: hidden;
+}
+
+
+@keyframes bgchange{
+    0%{
+
+    }
+    30%{
+        background-image: url(./images/sky.jpg);
+    }
+    50%{
+       
+        background-image: url(./images/sky.jpg);
+    }
+    60%{
+        background-image: url(./images/night.jpg);
+    }
+
+    98%{
+        background-image: url(./images/night.jpg);
+    }
+}
+
+.road{
+     height: 200px;
+     width:500%;
+     display: block;
+     background-image: url(./images/road.jpg);
+     position: absolute;
+     bottom: 0;
+     left:0;
+     right:0;
+     /* z-index: 1; */
+     background-repeat: repeat-x;
+    animation: road 5s linear infinite;
+}
+
+@keyframes road {
+    100%{
+        transform: translateX(-2400px);
+    }
+}
+
+.city{
+    height: 250px;
+    width:500%;
+    display:block;
+    background-image: url(./images/city.png);
+    position: absolute;
+    bottom: 200px;
+    left:0;
+    right:0;
+    /* z-index: 1; */
+    background-repeat: repeat-x;
+    animation: city 20s linear infinite;
+
+}
+
+@keyframes city {
+    100%{
+        transform: translateX(-1000px);
+    }   
+}
+
+.car{
+
+    width:400px;
+    left:35%;
+    bottom:100px;
+    transform: translateX(-30%);
+    position: absolute;
+    /* z-index: 2; */
+}
+
+.car img{
+    width: 100%;
+   
+}
+
+.tyre img{
+    width: 80px;
+    height: 80px;
+    animation: tyre .5s linear infinite ;
+   
+}
+
+@keyframes tyre{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.left{
+ position: absolute;
+ top:50.5%;
+ left:8.8%;
+}
+
+.right{
+    position: absolute;
+    top:50.5%;
+    right:12%
+   }
+
+   
+   .sun img{
+    position: absolute;
+    background-size: cover;
+    width: 116px;
+    height: 108px;
+    top: 75px;
+    right: -10vw;
+    animation-name: sunanimation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes sunanimation {
+    0%{
+    }
+    50%{
+        transform: translateX(-100vw);
+    }
+    100%{
+        transform: translateX(-200vw);
+    }
+}
+.moon img{
+    position: absolute;
+    /* z-index: 0; */
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 75px;
+    right: -110vw;
+    animation-name: moonanimation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes moonanimation {
+    0%{
+    }
+    50%{
+        transform: translateX(-100vw);
+    }
+    100%{
+        transform: translateX(-220vw);
+    }
+}
+.flag img{
+    position: absolute;
+    width: 10%;
+    bottom: 105px;
+    right:15%;
+}
